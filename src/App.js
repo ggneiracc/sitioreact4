@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+
+import MenuNav from "./sitioweb/MenuNav";
+import Carrusel from "./sitioweb/Carrusel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          Sitio Web para demostrar subida del sitio a GitHub
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="row bg-secondary">
+        <img src="https://i.ibb.co/C7LWGnF/header.jpg" alt="header" border="0" />
       </header>
+
+      <nav className="row bg-warning">
+        <MenuNav />
+      </nav>
+
+      <section className="row bg-primary"> 
+        <article className="col-md-6 bg-warning"> 
+          <Carrusel />
+        </article>
+        
+        <article className="col-md-4 bg-secondary">
+          Articulo 2
+        </article>
+
+        <aside className="col-md-2 bg-primary">
+          aside (Apartado)
+        </aside>
+      </section>
+
+      <footer className="row bg-dark text-light">
+        footer (Pie de página)
+      </footer>
     </div>
   );
 }
